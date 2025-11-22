@@ -1,0 +1,17 @@
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- backend/deploy.yml
+- frontend/deploy.yml
+- backend/service.yml
+- frontend/service.yml
+  
+
+images:
+- name: 654654554686.dkr.ecr.us-east-1.amazonaws.com/dvn-nov-workshop/production/backend
+  newName: 654654554686.dkr.ecr.us-east-1.amazonaws.com/dvn-nov-workshop/production/backend
+  newTag: 6dd286b44dc4479c6d1a7bcce9f4bbe297f3e875
+- name: 654654554686.dkr.ecr.us-east-1.amazonaws.com/dvn-nov-workshop/production/frontend
+  newName: 654654554686.dkr.ecr.us-east-1.amazonaws.com/dvn-nov-workshop/production/frontend
+  newTag: 99b5c4773744a6a5a114e890a82894039d4d1b57
